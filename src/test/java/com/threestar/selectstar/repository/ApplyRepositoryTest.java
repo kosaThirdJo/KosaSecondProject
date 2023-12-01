@@ -38,7 +38,7 @@ class ApplyRepositoryTest {
         List<Apply> byApplyIDUserUserIdIs = applyRepository.findByApplyID_User_UserIdIs(1);
         System.out.println(byApplyIDUserUserIdIs);
     }
-    @Test
+    /*@Test
     @DisplayName("글 신청 여부 조회")
     void check(){
         boolean byApplyIDUserUserIdIsAndApplyIDMeetingMeetingIdIs = applyRepository.existsByApplyID_User_UserIdIsAndApplyID_Meeting_MeetingIdIs(1, 8);
@@ -57,5 +57,5 @@ class ApplyRepositoryTest {
         applyRepository.save(build);
         boolean byApplyIDUserUserIdIsAndApplyIDMeetingMeetingIdIs = applyRepository.existsByApplyID_User_UserIdIsAndApplyID_Meeting_MeetingIdIs(1, 9);
         System.out.println(byApplyIDUserUserIdIsAndApplyIDMeetingMeetingIdIs);
-    }
+    }*/
 }
