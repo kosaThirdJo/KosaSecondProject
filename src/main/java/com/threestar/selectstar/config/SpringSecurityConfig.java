@@ -71,7 +71,8 @@ public class SpringSecurityConfig {
 
                 // 요청에 대한 권한 설정
                 .authorizeHttpRequests(authorize -> authorize  // authorizeRequests() : deprecated로 authorizeHttpRequest() 사용
-                .requestMatchers("/","/meeting","/apply/**","/meeting/**","/comment/meeting/**","/users/**" ,"/login","/rankMeeting", "/checkDuplicate", "/profiles/**", "/profiles/info/**").permitAll()  // 인증 필요 없음
+                                .requestMatchers("/**","/assets/**","/","/index.html","/meeting","/apply/**","/meeting/**","/comment/meeting/**",
+                                        "/users/**" ,"/login","/rankMeeting", "/checkDuplicate", "/profiles/**", "/profiles/info/**").permitAll()  // 인증 필요 없음
 //                 .requestMatchers("/admin/**").hasRole("ADMIN")  // 관리자 구현 예정
                 .anyRequest().authenticated()  // 나머지는 인증 필요
                 );
